@@ -1,0 +1,74 @@
+﻿.qrButton {
+    background-color: rgba(0, 0, 0, 0); /* 无背景 */
+    color: #777; /* 文字 */
+    padding: 14px 20px; /* 内边距 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 去掉下划线 */
+    display: inline-block; /* 行内块元素 */
+    font-size: 16px; /* 字体大小 */
+    border: none; /* 去掉边框 */
+    border-radius: 8px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针样式 */
+    transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
+    height: 50px;
+}
+
+.qrButton:hover {
+    background-color: #46d4f75e; /* 鼠标悬停时的背景颜色 */
+}
+
+/* 弹出窗口样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定位置 */
+    z-index: 1; /* 置于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 全宽 */
+    height: 100%; /* 全高 */
+    overflow: auto; /* 允许滚动 */
+    background-color: rgb(0,0,0); /* 背景颜色 */
+    background-color: rgba(0,0,0,0.4); /* 背景颜色带透明度 */
+    padding-top: 60px; /* 上边距 */
+}
+
+/* 弹出窗口内容样式 */
+.modal-content {
+    background-color: #fefefe; /* 背景颜色 */
+    margin: 5% auto; /* 居中 */
+    padding: 20px; /* 内边距 */
+    border: 1px solid #888; /* 边框 */
+    width: 500px; /* 固定宽度 */
+    height: 500px; /* 固定高度 */
+    border-radius: 10px; /* 圆角 */
+    text-align: center; /* 内容居中 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+/* 二维码图片样式 */
+.modal-content img {
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    max-height: 100%; /* 图片最大高度为容器高度 */
+    object-fit: contain; /* 保持图片比例 */
+}
+
+/* 关闭按钮样式 */
+.close {
+    color: #aaa; /* 颜色 */
+    float: right; /* 右浮动 */
+    font-size: 28px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    position: absolute; /* 绝对定位 */
+    top: 10px; /* 距离顶部 */
+    right: 15px; /* 距离右侧 */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* 鼠标悬停或聚焦时的颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    cursor: pointer; /* 鼠标指针样式 */
+}

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+	    <link rel="icon" href="https://youpaiyun.52txr.cn/img/favicon.ico" type="image/x-icon">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>打地鼠源码下载_网页版_打地鼠H5_打地鼠Html5游戏_打地鼠在线玩免下载</title>
+		<meta name="description" content="这是一个基于HTML5 Canvas和Audio开发的游戏。打地鼠是一款曾风靡大千世界的休闲益智小游戏，如今我们终于将从游戏机上搬到了电脑上（在线玩免下载哦），不要说你不会玩，快来拿起手中的木槌打地鼠">
+		<meta name="keywords" content="打地鼠Html5游戏,打地鼠在线玩,打地鼠免下载,Canvas,HTML5游戏, HTML5版打地鼠">
+		 <meta http-equiv='content-language' content='ZH-CN'>
+		<link type="text/css" rel="stylesheet" href="static/css/main1.css">
+<script defer src="https://tongji.52txr.cn/random-string.js" data-website-id="674ca1cb-779e-48c5-9140-d3443db0f11d"></script>
+       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6605580376880594" crossorigin="anonymous"></script>
+       <style>  
+       /*首页h1隐藏*/
+    h1.hidden {display:none;}
+
+        .adright{
+        width:300px;
+        height:300px;
+        border: #ddd;
+        background: white;
+        right: 0px;
+        bottom: 0px;
+        position: fixed;
+        }
+        
+        .adleft{
+        width:300px;
+        height:300px;
+        border: #ddd;
+        background: white;
+        left: 0px;
+        bottom: 0px;
+        position: fixed;
+        }
+        
+    button{margin-right: 5px;float: right;margin-top:5px;}
+    </style>
+    <script src="static/js/jquery-3.1.1.min.js"></script>
+   
+	</head>
+	<body>
+	    <h1 class="hidden">免费在线玩的网页版打地鼠小游戏，来源于网络，仅供娱乐</h1>
+		<div id="hitmouse">
+			<!-- 预备界面 -->
+			<div id="gameCover" class="block background">
+				<!-- 声音控制按钮 -->
+				<a href="javascript:void(0)" id="btnSound" class="icon">&nbsp;</a>
+				<!-- 开始 -->
+				<a href="javascript:void(0)" id="btnPlay" class="icon">&nbsp;</a>
+				<!-- 帮助 -->
+				<a href="javascript:void(0)" id="btnHelp" class="icon">&nbsp;</a>
+				<!-- 关于我 -->
+				<a href="javascript:void(0)" id="btnAboutMe" class="icon">&nbsp;</a>
+				<!-- 加载资源 -->
+				<span id="progressText"></span>		
+			</div>	
+			<!-- 帮助界面 -->
+			<div id="HelpDiv">
+			  <!-- 帮助图片 -->
+			  <img src="static/picture/help.png" alt="帮助图片">
+			  <a href="javascript:void(0)" id="btnBack" class="icon">&nbsp;</a>
+			</div>
+			<!-- 游戏主体 -->
+			<div id="gameBody" class="block">
+				<div id="gameCanvas" class="block">
+					<!-- Main背景层 -->
+					<canvas width="750" height="550" id="maincanvas"></canvas>
+				</div>
+				<!-- 分数及暂停按钮 -->
+				<div id="numberAndPause" class="block">
+					<!-- 分数 -->
+					<div id="numberBefore" class="icon"></div>
+					<div id="number"></div>
+					<!-- 暂停 -->
+					<a href="javascript:void(0)" id="btnPause" class="icon">&nbsp;</a>
+				</div>
+				<!-- 下一关提示 -->
+			  <div id="nextLoding">
+					<!-- 分数 -->
+					<span id="currentScore"></span>
+					<spqn id="requireScore">
+		     </spqn></div>
+			</div>
+			<!-- 游戏结束 -->
+			<div id="gameOver" class="block">
+				<!-- 得分 -->
+				<span id="score"></span>
+				<!-- 准备 -->
+				<a href="javascript:void(0)" id="btnRetry" class="icon">&nbsp;</a>
+				<!-- 返回主菜单 -->
+				<a href="javascript:void(0)" id="btnBackToMenu" class="icon">&nbsp;</a>			
+			</div>
+		</div>
+		<!--我使用这个框架的代码并不多，主要是工具类使用-->
+		<script type="text/javascript" src="static/js/my.js"></script>
+		<script type="text/javascript" src="static/js/Component.js"></script>
+		<script type="text/javascript" src="static/js/DisplayObject.js"></script>
+		<script type="text/javascript" src="static/js/Bitmap.js"></script>
+		<script type="text/javascript" src="static/js/ImageManager.js"></script>
+		<script type="text/javascript" src="static/js/DOM.js"></script>
+		<script type="text/javascript" src="static/js/Math.js"></script>
+		<script type="text/javascript" src="static/js/buzz.js"></script>
+		 
+		<script type="text/javascript" src="static/js/images.js"></script>
+		<script type="text/javascript" src="static/js/audios.js"></script>
+        <script type="text/javascript" src="static/js/mouse.js"></script>
+        <script type="text/javascript" src="static/js/star.js"></script>
+		<script type="text/javascript" src="static/js/score.js"></script>
+	 	<script type="text/javascript" src="static/js/Audio.js"></script>
+		<script type="text/javascript" src="static/js/Animation.js"></script>
+		<script type="text/javascript" src="static/js/star1.js"></script>	
+		<script type="text/javascript" src="static/js/score1.js"></script>			
+		<script type="text/javascript" src="static/js/hammer.js"></script>
+		<script type="text/javascript" src="static/js/mouse1.js"></script>
+		<script type="text/javascript" src="static/js/MouseHit.js"></script>
+		<script type="text/javascript" src="static/js/UI.js"></script>
+		<script type="text/javascript" src="static/js/main.js"></script>
+		<div style="text-align:center;">
+</div>
+
+<div align="center">
+<font size=4px color="blue">
+其他小游戏： <a href="index3.html" title="在线扫雷网页版">在线扫雷</a> &emsp;||&emsp;<a href="index2.html" title="打地鼠网页小游戏">蜘蛛纸牌</a>&emsp;||&emsp; <a href="index6.html" title="3D魔方">3D魔方</a> &emsp;||&emsp; <a href="https://www.52txr.cn/game/Fruits/index.html" title="3D魔方">水果忍者</a> </font>
+</div>
+<div align="center">
+<font size=3px>  欢迎访问个人博客主页： <a href="index.html" title="博客主页">陶小桃Blog</a>  </font>
+</div>
+
+
+<div class="adright">
+<button onclick="">一键关闭所有广告</button>
+<!-- hit2 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6605580376880594" data-ad-slot="2936357167" data-ad-format="auto"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+ 
+<div class="adleft">
+<button onclick="">一键关闭所有广告</button>
+<!-- hit2 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6605580376880594" data-ad-slot="2936357167" data-ad-format="auto"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div> 
+ <script>
+     $('button').click(function(){
+     $('.adleft').hide()
+     $('.adright').hide()
+     })
+ </script> 
+
+	</body>
+</html>

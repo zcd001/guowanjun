@@ -1,0 +1,346 @@
+﻿/*付费可见区域*/
+#tepassPost, #tepassVip, #tepassReward {
+	text-align: center;
+}
+.tepasspost {
+	padding: 30px 10px 5px;
+	margin: 15px 0;
+	border: 1px dashed #ccc;
+	position: relative;
+	min-height: 65px;
+}
+.tepass_top_left {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	font-size: 14px;
+	color: #90949c;
+}
+.tepass_top_right {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 14px;
+	color: #90949c;
+}
+.tepass_top_right img {
+	height: 15px;
+	margin: 0 !important;
+	pointer-events: none;
+}
+.tepass_top_right a{
+	float: left;
+	line-height: 20px;
+	margin: 0 7px 0 0;
+	font-size: 14px;
+	text-decoration: none;
+}
+.tepass_content { 
+	word-break: break-all;
+	text-align:left;
+	font-size:14px;
+	color:#565656;
+	white-space:pre-line; 
+}
+/* 付款方式选择 */
+.feetype{
+	width: 250px;
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	margin: 5px auto 5px;
+}
+.feetype input[type="radio"]{
+	display: none;
+}
+.feetype label{
+	cursor: pointer;
+}
+.feetype label img{
+	width: 60px;
+	float: left;
+	margin: 0 !important;
+	box-shadow: none !important;
+	pointer-events: none;
+}
+.feetype label span{
+	line-height: 50px;
+	float: left;
+}
+.cl {clear:left;}
+/* 价格 */
+.tepass_price {
+	display: table;
+	margin: 5px auto 5px !important;
+	font-size: 14px !important;
+	line-height: 20px !important;
+	color: #6d6d6d;
+	border: 1px dashed #bfbfbf;
+	padding: 3px 9px;
+	border-radius: 5px;
+}
+.tepass_price_for_vip {
+	font-size: 14px !important;
+	line-height: 20px !important;
+	color: #ffa400;
+}
+.tepass_price_for_eternal {
+	margin: 0 0 0 10px !important;
+	font-size: 16px !important;
+	line-height: 20px !important;
+	color: #ee7751;
+	display: inline-block;
+}
+/* 按钮 */
+#verifybtn {
+	border-style: none;
+	outline: none;
+	border-radius: 5px;
+	width: 80px;
+	height: 30px;
+	background-color: #1977ff;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	font-size: 14px;
+	padding: 0 5px;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
+#verifybtn:active{
+    background-image: linear-gradient(#ea584d,#ea584d);
+}
+/* 提示 */
+.pay_tips{
+	font-size: 12px;
+	color: #90949C;
+}
+/*弹出二维码*/
+#qrcode_box {
+	z-index: 10000;
+	position: absolute;
+	left: 50%;
+	top: -75px;
+	width: 240px;
+	margin-left: -120px;
+	display: none;
+	min-height: 320px;
+	background-color: #F5F5F5;
+    box-shadow: 0 0 12px 4px rgba(0,0,0,.04);
+    border-radius: 5px;
+	text-align: center;
+	box-sizing: border-box;
+}
+#qrcode_box dtt img.qr-logo {
+    display: inline-block;
+    margin: 0;
+    padding-top: 15px;
+    width: 120px;
+    text-align: center;
+}
+#qrcode_box img{
+	opacity: 1;
+	margin:0 auto;
+	vertical-align:baseline;
+	pointer-events: none;
+}
+#qrcode_box dll {
+	width: 240px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+#qrcode_box dtt {
+	text-align: center;
+	line-height: 42px;
+	font-weight: bold;
+	font-size: 15px;
+	display: block;
+}
+.qrcode_tips{
+	font-size: 14px;
+    line-height: 21px;
+}
+.qrcode_text {
+    position: absolute;
+    top: 250px;
+    left: 0;
+	width: 240px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    line-height: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+}
+.qrcode_money {
+    font-size: 14px;
+	padding-top: 10px;
+}
+.qrcode_money span {
+    color: red;
+    font-weight: bold;
+}
+.alipay_but{
+    cursor: pointer;
+}
+#qrcode_box ddd {
+	padding: 6px;
+	margin: 0;
+	font-size: 12px;
+}
+#bgdiv {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	filter: alpha(opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+	visibility: hidden;
+	background: #000;
+	z-index: 9999;
+}
+
+/* 打赏样式 */
+#reward_from {
+    max-width: 100px;
+	height: 28px;
+	border: 1px solid #CCC;
+}
+#reward_money {
+    color: #999;
+    height: 28px;
+}
+#div_reward {
+	display: none;
+}
+.btn_reward {
+    padding: 8px 32px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #f1787f;
+    color: #fff;
+    width: auto;
+    height: auto;
+    line-height: normal;
+	display: block;
+    margin: 20px auto;
+}
+.reward_list {
+    text-align: center;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    margin: 15px auto;
+}
+.reward_more{
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ffe300;
+}
+.reward_clusr {   
+    padding-right: 0;
+}
+.reward_clusr img{
+	display: inline-block;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 10px 0;
+    pointer-events: none;
+}
+.tips {
+    text-align: center;
+    display: block;
+}
+.tips a{
+    text-decoration:underline;
+}
+nocompress{width: 100%;}
+/*打赏结束*/
+
+.qrcode_bottom {
+    border-radius: 0 0 .3125em .3125em;
+    width: 100%;
+    background: #33465a;
+    color: #f2f2f2;
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.qrcode_bottom.alipay {
+    background: #1977ff;
+}
+.qrcode_bottom.wxpay {
+    background: #08bb21;
+}
+select {
+    border: 1px solid #CCC;
+    height: 28px;
+    float: initial;
+}
+#expire_time {
+    font-size: 20px;
+    color: white;
+}	
+#expire_time span {
+	padding:0 10px;
+    background-color: black;
+}
+.lifevip{
+	padding: 30px 10px 5px;
+    margin: 15px 0;
+    border: 1px dashed #ccc;
+    position: relative;
+    min-height: 65px;
+    background-image: linear-gradient(to right, #d96fe7, #9314d3, #8a28f5, #453bc7, #4f0cb7);
+}
+.lifevip_top_left{
+	position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 14px;
+    color: white;
+}
+.lifevip_top_right{
+	position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+}
+.lifevip_text{
+	text-align: center;
+    font-size: 42px;
+    padding: 0 5px;
+    color: darkkhaki;
+}
+.lifevip_tips{
+	text-align: center;
+    display: block;
+    color: darkgray;
+    font-size: 12px;
+}
+span#labe1 {
+    width: 60px;
+    height: 50px;
+    background-size: 60px;
+}
+span#labe2 {
+    width: 60px;
+    height: 50px;
+    background-size: 60px;
+}
